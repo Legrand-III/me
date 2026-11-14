@@ -1,0 +1,765 @@
+/* ==========================================================================
+   Legrand's Modeling Portfolio
+   ========================================================================== */
+
+:root {
+  --color-bg: #121212;
+  --color-swirl: #e1a3c5;
+  --color-star: #362830;
+  --color-text: #b0b0b0;
+  --color-window-controls: #ff74c0;
+  --color-window-rule: #595959;
+  --color-window-bg: #51515154;
+
+  /* One size for every section's window chrome ("- [] X", "Photos.zip").
+     Viewport-based so it matches even though the windows differ in width.
+     (The Amplify.jpg photo window keeps its own smaller size.) */
+  --window-chrome-size: clamp(1.1rem, 2.5vw, 3.1rem);
+  /* Shared bar geometry, taken from the Photos.zip design (97px tall,
+     ~44px right / 21px left padding at 1917px wide) */
+  --window-bar-height: clamp(2.75rem, 5.06vw, 6.25rem);
+  --window-bar-pad-start: max(10px, 1.1vw);
+  --window-bar-pad-end: max(12px, 2.27vw);
+
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas,
+    "SF Mono", Menlo, monospace;
+
+  /* Braille glyph advance width as a fraction of 1em. index.js measures the
+     real value at load; this is the fallback (Segoe UI Symbol). */
+  --glyph-advance: 0.72;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Page layout (always above the decorative ASCII layer)
+   ========================================================================== */
+
+.page {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-inline: 1rem;
+}
+
+.site-header {
+  padding-block: clamp(1.5rem, 3.5vh, 2.5rem) clamp(0.75rem, 2vh, 1.5rem);
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3.75vw, 4.5rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+.site-main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* --- Fake window ------------------------------------------------------- */
+
+.window {
+  width: 71.5vw;
+  container-type: inline-size;
+  background-color: var(--color-window-bg);
+}
+
+.window__bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: var(--window-bar-height);
+  margin-inline: 2px;
+  /* minus the 2px line inset so the text lines up with the Photos.zip bar */
+  padding: 0 calc(var(--window-bar-pad-end) - 2px) 0 calc(var(--window-bar-pad-start) - 2px);
+  border-bottom: 2px solid var(--color-window-rule);
+}
+
+.window__controls {
+  font-family: var(--font-mono);
+  font-size: var(--window-chrome-size);
+  line-height: 1;
+  color: var(--color-window-controls);
+  white-space: pre;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* --- Carousel ---------------------------------------------------------- */
+
+.carousel {
+  /* Center slide width: a third of the window, but never taller than the
+     viewport allows (keeps the whole page on one screen on desktop). */
+  --slide-w: min(33.28cqw, max(160px, calc((100vh - 329px - var(--window-bar-height)) * 2 / 3)));
+  --slide-w: min(33.28cqw, max(160px, calc((100svh - 329px - var(--window-bar-height)) * 2 / 3)));
+  --pad-top: clamp(1rem, 2cqw, 1.75rem);
+  --pad-bottom: clamp(1.25rem, 3.4cqw, 3rem);
+
+  position: relative;
+  height: calc(var(--slide-w) * 1.5 + var(--pad-top) + var(--pad-bottom));
+  overflow: hidden;
+}
+
+.carousel__track {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel__slide {
+  --duration: 900ms;
+
+  position: absolute;
+  top: var(--pad-top);
+  left: 50%;
+  width: var(--slide-w);
+  aspect-ratio: 2 / 3;
+  /* Hidden until index.js assigns a position */
+  opacity: 0;
+  transform: translateX(-50%) translateX(-190%) scale(0.6);
+  transition:
+    transform var(--duration) cubic-bezier(0.65, 0, 0.35, 1),
+    opacity var(--duration) ease;
+}
+
+.carousel__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Side slides are 80% of the center one, separated by a small gap */
+.carousel__slide.is-prev {
+  opacity: 1;
+  transform: translateX(-50%) translateX(-93.4%) scale(0.80);
+}
+
+.carousel__slide.is-current {
+  z-index: 1;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.carousel__slide.is-next {
+  opacity: 1;
+  transform: translateX(-50%) translateX(93.4%) scale(0.80);
+}
+
+/* Off-stage: waiting to come in on the left / just left on the right */
+.carousel__slide.is-before {
+  opacity: 0;
+  transform: translateX(-50%) translateX(-190%) scale(0.6);
+}
+
+.carousel__slide.is-after {
+  opacity: 0;
+  transform: translateX(-50%) translateX(190%) scale(0.6);
+}
+
+.carousel__slide.no-transition,
+.carousel.is-continuous .carousel__slide {
+  transition: none;
+}
+
+/* index.js moves the slides every frame */
+.carousel.is-continuous .carousel__slide {
+  will-change: transform, opacity;
+}
+
+/* Without JS, just show the first three side by side */
+.carousel:not(.is-ready) .carousel__slide:nth-child(1) {
+  opacity: 1;
+  transform: translateX(-50%) translateX(-93.4%) scale(0.80);
+}
+
+.carousel:not(.is-ready) .carousel__slide:nth-child(2) {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.carousel:not(.is-ready) .carousel__slide:nth-child(3) {
+  opacity: 1;
+  transform: translateX(-50%) translateX(93.4%) scale(0.80);
+}
+
+/* --- Footer links ------------------------------------------------------ */
+
+.site-footer {
+  padding-block: clamp(0.75rem, 2vh, 1.25rem) clamp(1rem, 2.5vh, 1.75rem);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  line-height: 1.2;
+}
+
+.socials__sep {
+  padding-inline: 0.6em;
+}
+
+.socials a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 2px;
+}
+
+.socials a:focus-visible {
+  outline: 2px solid var(--color-window-controls);
+  outline-offset: 4px;
+}
+
+/* --- Measurements screen ----------------------------------------------- */
+
+/* The design sits the box slightly below center */
+.screen--measurements .page {
+  padding-top: 5.8vh;
+  padding-top: 5.8svh;
+}
+
+.measure {
+  /* Same footprint as the carousel window; shrinks on short viewports so the
+     whole box (bar included) fits on one screen. Inner sizes are cqw of this box. */
+  width: min(71.5vw, max(560px, calc((100vh - 110px - var(--window-bar-height)) * 1.665)));
+  width: min(71.5vw, max(560px, calc((100svh - 110px - var(--window-bar-height)) * 1.665)));
+  container-type: inline-size;
+  background-color: var(--color-window-bg);
+}
+
+.measure__panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 38.83cqw;
+  align-items: start;
+  padding: 0.95cqw 2.34cqw 1.02cqw 2.55cqw;
+}
+
+/* Code block */
+.code {
+  --cursor-color: var(--color-window-controls);
+  padding-top: 2.3cqw;
+  font-family: var(--font-mono);
+  color: var(--color-text);
+}
+
+.code__line {
+  margin: 0;
+  font-weight: 400;
+}
+
+.code__title,
+.code__close {
+  font-size: 4.82cqw;
+  line-height: 1.2;
+}
+
+.code__fn {
+  color: var(--color-window-controls);
+}
+
+.code__body {
+  position: relative;
+  margin: 4.4cqw 0 3.5cqw;
+  padding: 1.93cqw 0 1.93cqw 8.76cqw;
+  list-style: none;
+  font-size: 4.67cqw;
+  line-height: 1.25;
+}
+
+/* Pink gutter line */
+.code__body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.45cqw;
+  width: max(3px, 0.44cqw);
+  background-color: var(--color-window-controls);
+  transform-origin: top;
+  transition: transform 450ms ease-out;
+}
+
+.code__val {
+  color: var(--color-swirl);
+}
+
+/* Typing effect. Text is always in the DOM (screen readers get it at once);
+   index.js only moves --n, the number of characters revealed. */
+.type {
+  /* Characters revealed so far; index.js updates it inline per line */
+  --n: 0;
+
+  position: relative;
+  display: inline-block;
+  white-space: pre;
+}
+
+.code.is-armed .type__text {
+  clip-path: inset(-0.3em calc(100% - var(--n, 0) * 1ch) -0.3em -0.3em);
+}
+
+.code.is-armed:not(.is-body) .code__body::before {
+  transform: scaleY(0);
+}
+
+.type.has-cursor::after {
+  content: "";
+  position: absolute;
+  top: 0.12em;
+  bottom: 0.12em;
+  left: calc(var(--n, 0) * 1ch);
+  width: 0.09em;
+  background-color: var(--cursor-color);
+  animation: cursor-blink 1.05s steps(1, end) infinite;
+}
+
+/* Solid while typing, blinks when idle */
+.code.is-typing .type.has-cursor::after {
+  animation: none;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Photo window */
+.photo-window {
+  background-color: #1e1f22;
+}
+
+.photo-window__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.82cqw;
+  padding: 0 2.4cqw 0 1.53cqw;
+  border-bottom: 2px solid var(--color-window-rule);
+  font-family: var(--font-mono);
+  font-size: 2.34cqw;
+  line-height: 1;
+  color: var(--color-window-controls);
+  white-space: pre;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.photo-window__img {
+  display: block;
+  width: calc(100% - 5.1cqw);
+  height: auto;
+  aspect-ratio: 2 / 3;
+  margin: 1.17cqw 2.55cqw 1.53cqw;
+  object-fit: cover;
+}
+
+/* --- Photos screen: fixed-size window with its own scroll -------------- */
+
+.gallery-window {
+  --scroll-thumb: var(--color-window-controls);
+  --scroll-track: #000;
+
+  display: flex;
+  flex-direction: column;
+  width: 64.8vw;
+  height: max(420px, min(calc(100vh - 108px), 50.6vw));
+  height: max(420px, min(calc(100svh - 108px), 50.6vw));
+  container: gallery / inline-size;
+  background-color: var(--color-window-bg);
+}
+
+.gallery-window__bar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--window-bar-height);
+  padding: 0 var(--window-bar-pad-end) 0 var(--window-bar-pad-start);
+  border-bottom: 2px solid var(--color-window-rule);
+  font-family: var(--font-mono);
+  font-size: var(--window-chrome-size);
+  line-height: 1;
+  color: var(--color-window-controls);
+}
+
+.gallery-window__title {
+  margin: 0;
+  font: inherit;
+}
+
+.gallery-window__controls {
+  white-space: pre;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.gallery {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin-right: max(10px, 1.85cqw);
+  padding: max(14px, 3cqw) max(10px, 1.8cqw) max(14px, 1.5cqw) max(12px, 4.9cqw);
+}
+
+.gallery:focus-visible {
+  outline: 2px solid var(--color-window-controls);
+  outline-offset: -2px;
+}
+
+/* Dark pink thumb on a black track (Chromium / Safari) */
+.gallery::-webkit-scrollbar {
+  width: 6px;
+}
+
+.gallery::-webkit-scrollbar-track {
+  margin-block: max(10px, 1.85cqw) max(10px, 1.6cqw);
+  background-color: var(--scroll-track);
+  border-radius: 3px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 3px;
+}
+
+/* Firefox has no ::-webkit-scrollbar; give it the same colours */
+@supports not selector(::-webkit-scrollbar) {
+  .gallery {
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+    scrollbar-width: thin;
+  }
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.25cqw 2.7cqw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Every cell is the same portrait shape; photos keep their own proportions */
+.gallery__item {
+  aspect-ratio: 257 / 395;
+}
+
+.gallery__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Portrait / tablet-shaped screens: use the extra height instead of the
+   desktop proportions */
+@media (max-aspect-ratio: 13 / 10) and (min-width: 701px) {
+  .gallery-window {
+    width: 86vw;
+    height: max(420px, calc(100vh - 108px));
+    height: max(420px, calc(100svh - 108px));
+  }
+}
+
+@container gallery (max-width: 760px) {
+  .gallery__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3cqw;
+  }
+}
+
+@container gallery (max-width: 480px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4cqw;
+  }
+}
+
+/* --- Small screens ----------------------------------------------------- */
+
+@media (max-width: 700px) {
+  .gallery-window {
+    width: 100%;
+    height: max(420px, calc(100vh - 96px));
+    height: max(420px, calc(100svh - 96px));
+  }
+
+  .window {
+    width: 100%;
+  }
+
+  /* Stack the code above the photo, with text sized for a phone */
+  .measure {
+    width: 100%;
+  }
+
+  .measure__panel {
+    grid-template-columns: 1fr;
+    row-gap: 6cqw;
+    padding: 2cqw 5cqw 5cqw;
+  }
+
+  .code__title,
+  .code__close {
+    font-size: 9cqw;
+  }
+
+  .code__body {
+    margin: 5cqw 0 4cqw;
+    padding: 3cqw 0 3cqw 10cqw;
+    font-size: 7.6cqw;
+  }
+
+  .code__body::before {
+    left: 0.8cqw;
+  }
+
+  .photo-window__bar {
+    height: 11cqw;
+    padding: 0 4cqw;
+    font-size: 5cqw;
+  }
+
+  .photo-window__img {
+    width: calc(100% - 8cqw);
+    margin: 3cqw 4cqw 4cqw;
+  }
+
+  /* Three photos, sized so the side ones stay fully inside the window.
+     The row spans ~2.66x the center width, so 35cqw leaves a small margin. */
+  .carousel {
+    --slide-w: 35cqw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__slide,
+  .code__body::before {
+    transition: none;
+  }
+
+  .type.has-cursor::after {
+    animation: none;
+  }
+}
+
+/* Each full-height screen owns its ASCII background, so it scrolls with it */
+.screen {
+  position: relative;
+  isolation: isolate;
+}
+
+/* ==========================================================================
+   ASCII background
+   - aria-hidden in the markup keeps it out of the accessibility tree
+   - absolute + z-index 0 keeps it behind its section, never intercepting input
+   ========================================================================== */
+
+.ascii-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Each cluster is a size container; the art inside is sized in cqh
+   (percent of the cluster's height) so the composition scales as one. */
+.ascii-bg__group {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  container-type: size;
+}
+
+.ascii-bg__group--left {
+  left: 0;
+  aspect-ratio: 660 / 1078;
+}
+
+.ascii-bg__group--right {
+  right: 0;
+  aspect-ratio: 730 / 1078;
+}
+
+.ascii {
+  /* --cols / --rows: grid of the piece; --col-w / --row-h: cell size in cqh */
+  position: absolute;
+  margin: 0;
+  white-space: pre;
+  font-family: "Segoe UI Symbol", "Apple Symbols", "DejaVu Sans Mono",
+    "Noto Sans Symbols 2", monospace;
+  font-weight: 400;
+  font-size: calc(var(--col-w) / var(--glyph-advance));
+  line-height: var(--row-h);
+  letter-spacing: 0;
+}
+
+/* --- Stars 6 (back layer) ---------------------------------------------- */
+.ascii--star {
+  z-index: 0;
+  color: var(--color-star);
+  --col-w: 3cqh;
+  --row-h: 6.5cqh;
+  top: 0;
+}
+
+.ascii--star-left {
+  left: 3cqh;
+}
+
+.ascii--star-right {
+  left: 0;
+}
+
+/* --- Swirls (front layer) ---------------------------------------------- */
+.ascii--swirl {
+  z-index: 1;
+  color: var(--color-swirl);
+}
+
+.ascii--swirl-1 {
+  --col-w: 0.86cqh;
+  --row-h: 1.5cqh;
+  left: 5.6cqh;
+  top: 2.8cqh;
+}
+
+.ascii--swirl-2 {
+  --col-w: 1.06cqh;
+  --row-h: 1.76cqh;
+  left: 2.8cqh;
+  top: 49.6cqh;
+}
+
+.ascii--swirl-3 {
+  --col-w: 1.24cqh;
+  --row-h: 2.1cqh;
+  right: 0;
+  top: 0;
+}
+
+/* --- Measurements screen: flowers + one star ---------------------------- */
+.ascii--flower {
+  z-index: 1;
+  color: var(--color-swirl);
+}
+
+.ascii--flower-1 {
+  --col-w: 0.86cqh;
+  --row-h: 1.39cqh;
+  left: 3.7cqh;
+  top: 1.9cqh;
+}
+
+.ascii--flower-2 {
+  --col-w: 0.86cqh;
+  --row-h: 1.44cqh;
+  left: 3.7cqh;
+  top: 31.5cqh;
+}
+
+.ascii--flower-3 {
+  --col-w: 0.69cqh;
+  --row-h: 1.2cqh;
+  left: 30cqh;
+  top: 18.6cqh;
+}
+
+.ascii--star-measure {
+  --col-w: 2.8cqh;
+  --row-h: 6.1cqh;
+  left: 8.2cqh;
+  top: 2.3cqh;
+}
+
+.ascii--sparkle {
+  z-index: 1;
+  color: var(--color-swirl);
+}
+
+.ascii--stars-1 { --col-w: 0.69cqh; --row-h: 1.1cqh;  left: 0.7cqh;  top: 2.8cqh; }
+.ascii--stars-3 { --col-w: 0.82cqh; --row-h: 1.47cqh; left: 6cqh;    top: 56.6cqh; }
+.ascii--stars-2 { --col-w: 1.16cqh; --row-h: 2.05cqh; left: 19.8cqh; top: 5.6cqh; }
+.ascii--stars-4 { --col-w: 0.85cqh; --row-h: 1.44cqh; left: 25cqh;   top: 71cqh; }
+.ascii--star5-left  { --col-w: 0.85cqh; --row-h: 1.42cqh; left: 15.8cqh; top: 31.5cqh; }
+.ascii--star5-right { --col-w: 0.83cqh; --row-h: 1.39cqh; left: 22.5cqh; top: 55.2cqh; }
+
+.ascii--star-measure-left {
+  --col-w: 3.2cqh;
+  --row-h: 5.3cqh;
+  left: 1cqh;
+  top: 20cqh;
+}
+
+/* ==========================================================================
+   Narrow / portrait screens: stack the clusters diagonally
+   (left cluster top-left, right cluster bottom-right) so they don't collide.
+   ========================================================================== */
+@media (max-aspect-ratio: 13 / 10) {
+  .ascii-bg__group {
+    height: 64%;
+    max-height: calc(100vw * 1.45);
+  }
+
+  .ascii-bg__group--left {
+    top: 0;
+  }
+
+  .ascii-bg__group--right {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+@media (max-aspect-ratio: 13 / 10) and (orientation: portrait) and (max-width: 480px) {
+  .ascii-bg__group {
+    height: 60%;
+  }
+}

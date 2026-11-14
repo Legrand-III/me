@@ -1,10 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Modeling portfolio of Legrand Davis">
+    <meta name="theme-color" content="#121212">
+    <title>Legrand Davis III | Modeling Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="index.js" defer></script>
+
 </head>
 <body>
-$END$
+  <main>
+    <!-- Screen 1: name, photo carousel, social links -->
+    <section class="screen screen--intro" aria-labelledby="site-title">
+      <!-- Decorative ASCII backgrounds: hidden from assistive tech -->
+    <div class="ascii-bg" aria-hidden="true">
+      <div class="ascii-bg__group ascii-bg__group--left">
+        <pre class="ascii ascii--star ascii--star-left">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣴⣤⡀⠀⠀⠀⠀⣭⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⡀⠈⠳⣄⠀⠀⠼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢠⠀⠀⠀⢳⠀⠀⠈⠢⡀⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠉⢻⠉⢀⠀⠀⢣⠀⠀⠀⠈⢼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠺⠃⠀⠀⠡⠀⠀⠀⣸⠐⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠱⡀⠀⣿⡀⢈⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⣹⣾⣿⣷⣏⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠉⠉⠉⠉⠙⠛⢻⣿⣶⣿⡟⠛⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠞⠹⣿⢏⠳⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠢⠀⠀⠀⠰⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡀⢸⠀⠀⠡⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢬⠀⠀⠀⠱⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢄⠀⠀⢣⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠶⠀⠀⠓</pre>
+        <pre class="ascii ascii--swirl ascii--swirl-1">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠄⠒⠂⠀⠐⠒⠢⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠢⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡌⠀⠀⠠⠀⠀⠀⢄⣀⣤⣶⡶⣶⣦⣤⣈⢆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⣴⠟⠋⠀⠀⠀⠀⠀⠈⠛⢿⣧⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢃⠀⠀⠀⢀⣾⠋⠀⠆⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠄⣀⣸⣇⠀⠊⠀⠀⠀⠀⠒⢄⠀⠀⠀⠀⡟⣿⡆
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⡆⠀⠀⠀⡇⢹⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⡔⠊⠉⠉⠒⣄⠀⠻⣄⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⡰⠁⣼⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣦⢹⠇⣴⣾⠇⠀⢸⠀⠀⠰⣦⠀⠈⡆⠀⠉⠳⠤⡤⠤⠤⠖⠁⠀⠀⡐⠁⢀⣿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⢃⠁⣚⣭⣤⡀⠀⠀⠳⢤⡴⠟⠀⢀⠇⢀⣀⣰⣾⣶⠀⠀⠀⢀⡠⠊⠀⣠⣿⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡆⠀⣀⠰⠂⠓⠉⠉⠉⠉⠁⠀⠀⠀⠀⣀⠀⣴⡋⣠⣿⣿⡿⠟⠉⢀⠠⠂⠁⢀⣠⣾⠟⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣷⣿⡿⠏⠒⣉⣤⣤⣤⣶⣶⣦⣭⣭⣭⣭⣉⣁⣀⣒⣛⣛⣛⡉⣭⣀⣀⣂⣉⣤⣤⣶⡾⠟⠋⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⢛⣩⡴⠾⠛⢉⡉⠭⠬⠥⠭⠬⠥⣉⣉⡉⠉⠉⠛⠛⠛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣾⠟⣩⡶⠛⣁⣤⣴⣮⣯⣴⣤⣬⣍⠂⢤⡀⢠⣀⠉⣙⣓⠦⣄⡀⠀⠀⠀⠈⠙⢿⣿⠙⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀
+⠀⠀⠀⠀⣰⡿⣩⡾⠋⣠⡾⠛⠉⠁⠀⠀⠀⠀⠈⠙⢿⣦⡈⢦⠙⣿⣮⡛⠀⠀⠙⢶⡀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠙⠿⠛⠀⠀⠀⠀⠀
+⠀⠀⠀⣰⢟⡴⠋⣠⠞⠁⠀⠀⠀⢀⣀⣀⣀⠀⠀⠀⠀⠙⣿⡄⢳⡘⠿⠇⠀⠀⠀⠀⠹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣰⢏⡼⠁⡼⠁⠀⠀⠀⢀⡴⠋⠀⠀⠈⠑⡄⠀⠀⠀⠸⣿⡀⠃⠀⠀⠀⠀⡀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢠⡏⡼⠁⡜⠀⠀⠀⠀⠀⣼⡃⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀⣿⠆⢸⠀⠀⠀⠨⡀⣀⠔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣾⢰⠃⠘⠀⠀⠀⠀⠀⠀⠸⣇⠀⠀⠀⠀⠀⠁⠀⠀⠀⣸⡿⠀⠸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⡇⡼⠀⠂⠀⠀⠀⠀⠀⠀⠀⠹⣷⣄⠀⠀⠀⠀⠀⣠⣼⡟⣡⡇⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⠁⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⠷⠶⠾⠿⢛⣡⣾⣿⠃⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⣴⣶⣶⣶⠶⢀⣠⣤⣶⣿⡟⠙⠋⠀⡇⠀⠀⢀⠄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠘⡆⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁⢠⣾⣿⡿⠿⣿⠟⠁⠀⠀⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢳⠸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠑⠤⢀⠠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        <pre class="ascii ascii--swirl ascii--swirl-2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡀⠀⠀⢀⣤⣤⡈⣿⣿⢃⣤⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠢⡀⠙⢿⣿⡽⣾⣷⠭⠿⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⡤⠤⠤⣄⡸⡄⠀⣠⣿⣿⢣⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⡴⠉⢀⣀⡀⠀⠙⢾⡄⣿⣿⠏⠘⠿⣿⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⡇⠀⠿⠂⠈⡄⠀⠀⢻⡈⠀⡊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠘⠦⢤⡠⠜⠀⠀⠀⠘⣇⢠⠃⠀⢀⣠⡤⠶⠶⠶⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡌⢀⣴⠟⠁⠀⠀⠀⠀⠀⠉⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠐⣤⣤⣤⣤⣤⣀⠀⣿⠁⣼⠃⠀⠀⢀⠤⠀⠀⠀⠀⠈⡇⠀⠀⠀⠀⢀⣠⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠘⣿⣿⣿⣿⣿⡆⣿⢰⡟⠀⠀⡇⢸⠀⠚⣿⠓⠂⢰⠃⠀⠀⠀⢰⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⠛⠿⠿⠷⠃⢿⡞⣷⢀⣾⣷⠈⠢⣀⣀⣀⡴⠋⠀⠀⠀⠀⠸⣿⠟⢁⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣴⣧⠘⣷⠸⣎⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠊⠉⣴⡄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠘⣿⣿⢞⣿⢟⣀⠙⣷⡙⢮⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⢶⣷⣜⣿⣣⣤⡄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⣴⣿⣟⣛⡿⣿⠿⠊⠻⢷⣍⡲⢄⡀⠐⣶⣶⣿⣶⡄⢸⠀⠀⣩⣿⣻⣽⠋⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠘⠛⠛⠹⣿⣷⠀⠀⠀⠀⠀⠉⠛⠿⢶⣥⣬⣙⣻⠟⠊⠘⣇⠀⠛⠉⠘⠻⠇⠀⢀⣤⣤⣀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⣠⣶⣶⡖⠀⠈⠉⠙⠻⠶⣦⣝⢧⣀⠀⠀⠀⢀⡞⠉⠀⠀⠈⠑⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⣿⡇⠀⠀⢀⣀⣀⣀⡘⠻⢿⣿⣧⡀⠀⣼⠀⢠⣿⠇⠀⠀⢸
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣿⣿⠟⣠⡴⠟⠛⠉⠉⠉⠙⠛⠶⣝⢻⣿⣆⣇⠀⠸⡁⠀⠀⢀⡜
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠀⣴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠱⠽⣿⡾⠀⠀⠈⠒⠒⠉⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⡠⠔⠤⣄⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⢀⣀⣀⣀⠀⠀⠀⢳⠀⠀⣠⣄⠀⠀⠸⣧⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣆⠀⠙⠿⠟⠧⠀⠀⢸⣀⣤⡻⣿⣴⣶⠆⢿⡄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣦⠀⠀⠀⠀⠀⣴⠃⠉⠛⣮⠛⣿⣧⠀⢸⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠒⠶⠒⠚⠁⠀⠀⠀⣿⠗⠙⠛⠂⢸⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠀⠀⠀⠀⠀⠀</pre>
+      </div>
+      <div class="ascii-bg__group ascii-bg__group--right">
+        <pre class="ascii ascii--star ascii--star-right">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣴⣤⡀⠀⠀⠀⠀⣭⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⡀⠈⠳⣄⠀⠀⠼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢠⠀⠀⠀⢳⠀⠀⠈⠢⡀⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠉⢻⠉⢀⠀⠀⢣⠀⠀⠀⠈⢼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠺⠃⠀⠀⠡⠀⠀⠀⣸⠐⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠱⡀⠀⣿⡀⢈⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⣹⣾⣿⣷⣏⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠉⠉⠉⠉⠙⠛⢻⣿⣶⣿⡟⠛⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠞⠹⣿⢏⠳⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠢⠀⠀⠀⠰⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡀⢸⠀⠀⠡⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢬⠀⠀⠀⠱⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢄⠀⠀⢣⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠶⠀⠀⠓</pre>
+        <pre class="ascii ascii--swirl ascii--swirl-3">⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡞⠉⠀⠉⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢷⣀⢀⣆⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⣠⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⢣⡞⣡⡴⠖⠒⢶⣄⠀⠀⠀⠀⠀⠀⠙⢿⡆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡉⣿⠀⡏⠀⠀⠀⠀⠙⣇⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠁⢻⡄⣷⠀⠀⠀⢀⡀⡿⠆⠀⠀⠀⠀⠀⣸⠋⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠰⠮⠻⣜⢧⡀⠀⠿⠟⠁⠀⠀⠀⠀⣠⣾⢵⣇⣤⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠼⢯⡳⣄⠀⠀⠀⠀⠀⢀⡾⠉⠀⠀⠈⢳⠛⠂⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠻⣷⣄⠀⠀⠀⣼⠁⠀⢠⠄⠀⢈⣟⡁⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⡴⣒⣩⣭⣝⣒⠮⣝⣧⣄⠀⣯⠀⠀⠹⠧⢴⡿⠄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣎⣼⡋⠉⠈⠉⠙⠛⠶⣽⡻⣷⣿⡀⠀⠀⠀⢈⣁⣀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡗⣂⠀⠀⣀⡆⠀⠀⠀⠀⠈⠉⠙⠿⣆⠀⢠⡏⢁⢈⡆⠀
+⠀⠀⠀⠀⠀⠀⠀⠘⠳⠭⠯⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡈⢧⡈⠉⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣆⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠞⠛⠶⣄⠀⠀⢿⣆⣤⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠃⢠⠀⠀⡿⠀⠀⡸⣿⠰⠆⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠉⠉⠁⠀⡰⠃⣿⠀⠓⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠈⠙⠒⠒⠒⠋⠀⢰⢻⢀⣏⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⡴⠟⠁⠈⢙⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠋⣾⢰⡍⠀
+⠀⠀⠀⠀⠀⠀⠀⣸⠁⠀⠀⠀⠻⠟⠀⠀⠀⠀⠀⠀⠀⠀⠐⠁⣼⢇⠷⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢿⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣟⡘⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠘⢧⡀⠀⠀⠀⠙⠿⢷⣶⣤⣤⡴⠶⣫⣿⠟⡬⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢦⣀⠀⠀⠀⠀⠀⠀⣀⣤⣾⡿⣇⠛⠂⠀⠀⠀⠀
+⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠒⠒⠛⢋⣽⡿⡫⠶⠉⠀⠀⠀⠀⠀⠀
+⠀⠃⠤⢀⡀⣀⡀⣠⡄⠠⣶⡆⣀⡤⠖⣫⣾⣿⠻⠌⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⠀⠉⠁⠙⠁⣠⡴⠚⣁⣴⣿⠟⣥⠝⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⡴⠞⠁⣠⣾⠿⣫⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⡴⠋⠀⣠⣾⠟⢡⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣰⠟⠀⣠⡾⠋⠀⠀⡿⡆⠀⢀⡶⠛⠛⢶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣼⠃⠀⣴⠟⠀⠀⠀⢰⡇⡇⠀⠘⣇⣀⡔⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣸⠃⠀⣼⠃⠀⠀⠀⠀⢸⡇⠘⢦⣀⠀⠀⣀⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢀⡏⠀⢰⠃⠀⠀⡰⠀⠀⠸⣷⡀⠀⠈⠉⠉⠉⠀⠀⠀⠀⣤⠚⠉⠙⢦⡀⠀
+⢸⠇⠀⢸⠀⢀⠆⡇⠀⠀⠀⢣⠳⡀⠀⠀⠀⠀⠀⠀⠀⠀⢷⣷⠄⠀⠀⠹⡄
+⢸⡆⠀⢸⠀⣼⠁⣷⠀⠀⠀⠈⢧⠈⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+⠀⡇⠀⠀⠀⠶⠆⠹⣷⣄⠀⠀⠈⠻⣖⢤⣀⡀⠀⠀⢀⣠⣴⡿⠀⠿⠆⣰⠇
+⠀⠸⠀⠀⠀⢶⡆⠀⠀⠉⣁⠀⠀⠀⠈⠳⣄⡉⢙⢛⢛⡏⣥⠘⢗⣠⠞⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⢀⣀⡀⠈⢦⠉⠓⠶⠶⠶⠒⠚⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⡞⠉⠉⠙⣦⠈⢷⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⡄⠀⠱⠴⠞⢀⡿⠂⢸⡇⠅⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠲⠤⠤⠴⠞⠁⠀⣼⡇⣛⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡿⢡⡍⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+      </div>
+    </div>
+
+    <div class="page">
+      <header class="site-header">
+        <h1 class="site-title" id="site-title">Legrand Davis III</h1>
+      </header>
+
+      <div class="site-main">
+        <section class="window" aria-label="Portfolio photos">
+          <div class="window__bar">
+            <!-- Pretend decorative window controls -->
+            <span class="window__controls" aria-hidden="true"><i class="fa-solid fa-minus"></i> <i class="fa-regular fa-square"></i> <i class="fa-solid fa-x"></i></span>
+          </div>
+
+          <!-- Carousel -->
+          <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Blueprint 2026 photos">
+            <ul class="carousel__track">
+              <li class="carousel__slide"><img src="imgs/Carousel/face.png" alt="Legrand, Close-up face" width="4000" height="6000" decoding="async" fetchpriority="high"></li>
+              <li class="carousel__slide"><img src="imgs/Carousel/sideTorso.png" alt="Legrand, standing 3/4 perspective" width="4000" height="6000" decoding="async" fetchpriority="high"></li>
+              <li class="carousel__slide"><img src="imgs/Carousel/standing.png" alt="Legrand, standing with hand on neck" width="4000" height="6000" decoding="async" fetchpriority="high"></li>
+              <li class="carousel__slide"><img src="imgs/Carousel/standingso.png" alt="Legrand, standing straight on" width="4000" height="6000" decoding="async" fetchpriority="high"></li>
+              <li class="carousel__slide"><img src="imgs/Carousel/torsoPockets.png" alt="Legrand, standing with hands in pockets" width="4000" height="6000" decoding="async" fetchpriority="high"></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="site-footer">
+        <nav aria-label="Social links">
+          <ul class="socials">
+            <li><a href="https://www.instagram.com/carameldelightxo/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><span class="socials__sep" aria-hidden="true">|</span><a href="https://www.linkedin.com/in/legrand-davis-63911a2a5/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><span class="socials__sep" aria-hidden="true">|</span><a href="mailto:legranddavis3@gmail.com"><i class="fa-regular fa-envelope"></i></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </section>
+
+    <!-- Screen 2: measurements -->
+    <section class="screen screen--measurements" aria-labelledby="measurements-title">
+      <div class="ascii-bg" aria-hidden="true">
+        <div class="ascii-bg__group ascii-bg__group--left">
+        <pre class="ascii ascii--star ascii--star-measure-left">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣴⣤⡀⠀⠀⠀⠀⣭⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⡀⠈⠳⣄⠀⠀⠼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢠⠀⠀⠀⢳⠀⠀⠈⠢⡀⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠉⢻⠉⢀⠀⠀⢣⠀⠀⠀⠈⢼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠺⠃⠀⠀⠡⠀⠀⠀⣸⠐⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠱⡀⠀⣿⡀⢈⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⣹⣾⣿⣷⣏⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠉⠉⠉⠉⠙⠛⢻⣿⣶⣿⡟⠛⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠞⠹⣿⢏⠳⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠢⠀⠀⠀⠰⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡀⢸⠀⠀⠡⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢬⠀⠀⠀⠱⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢄⠀⠀⢣⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠶⠀⠀⠓</pre>
+        <pre class="ascii ascii--flower ascii--flower-1">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⡀⢢⣄⠀⢰⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣶⠀⣤⠈⣁⣘⣛⠳⠄⠃⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣤⡀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠣⠰⣦⡀⣿⣿⠟⠳⣄⠀⠆⠄⡲⠿⢿⡿⠋⠀⠀⠀⠀⢀⡠⠶⠛⠉⠁⠀⠀⠈⢣
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢿⣿⠘⣿⡇⢻⡇⠀⠀⠸⡆⠀⢀⡠⠖⠁⠀⠀⠀⠀⡠⠖⠉⠀⠀⠀⠀⠀⠀⠀⠀⢠
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⡢⢈⠳⢀⠻⣄⠀⠀⠁⠈⠀⠉⣿⡟⠃⡀⠐⠁⠀⠀⠀⠀⠀⢀⠖⠐⠀⠀⠀⡌
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⡋⠁⠀⢀⡀⠅⠈⢡⠀⠤⠶⠶⠚⢉⠄⠈⠀⠀⠀⠀⠀⠀⠀⠀⠘⣦⣀⢀⡠⠎⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠛⠛⠉⢁⠃⡜⢀⡇⡴⠺⣇⠠⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠀
+⠀⣠⠶⠛⠛⠛⠲⠤⣄⠀⠀⠀⠀⠀⠀⠀⣾⣿⣷⠎⠀⠉⠉⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣼⠃⠀⠀⠀⠀⠀⠀⠀⠑⢦⠀⠀⠀⠀⠀⠘⠋⠀⠀⠀⠀⢠⡇⠀⠀⠀⠀⠀⢀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⡇⠀⠀⣠⠖⢤⠀⠀⠀⠀⠀⠑⡄⠀⠀⠀⠀⠀⡆⢄⠀⢀⠎⠀⢀⠀⠐⠀⠁⠀⣀⣀⠀⠑⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢣⠀⠀⠣⠀⠀⡆⠀⠀⠀⠀⠀⠘⡀⠀⠀⠀⠀⠈⢒⠕⠓⠒⠉⠀⠀⠀⠀⠀⠌⠀⠀⠃⢀⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠣⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⡠⠂⠡⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡠⠔⠁⢀⠔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⢺⠀⠠⠐⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡃⡸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        <pre class="ascii ascii--flower ascii--flower-2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣧⣦⣸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⠒⠒⠠⡉⠟⠃⠀⡗⠀⠀⠂⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢺⡁⠀⠀⠀⢱⠀⢠⠁⡇⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⡀⠀⠈⠻⣦⠀⠀⠀⠆⡆⢸⠀⠀⠺⠴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣦⡘⣸⣴⣿⡀⠘⠀⠀⢰⠀⣧⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠻⣍⣿⣁⣽⠁⠀⠀⠀⡌⣰⠎⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠙⠛⢲⠋⡷⢤⡽⠆⠀⣐⡾⠍⠀⠘⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⠿⠃⠢⠄⠄⣼⡯⠔⠒⠒⠢⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⠫⠐⠂⢄⠀⠀⠀⠈⢢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠉⢇⠀⠀⠀⠱⡀⢀⠀⠀⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣎⠀⠘⢿⣆⠀⢈⢡⠛⠂⢀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡠⠄⠒⠒⠠⢄⡀⠈⠉⠀⠙⠒⠂⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢠⠛⠀⠀⠀⠀⠀⠀⠈⢂⠀⠀⠀⠄⠀⢀⣄⢀⣤⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⡄⠀⠀⠀⢤⣷⣶⠀⠀⡆⠀⢠⠀⠀⣼⠟⣧⢎⣤⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢻⡿⠀⠀⠀⠈⠋⠃⠀⠀⡇⠀⡌⣠⡶⡚⣢⡆⢵⣟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠳⡄⠀⢀⣀⣀⠀⠀⡰⠀⡐⠀⡀⢉⡩⣧⣸⠍⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀⢑⡴⡑⠞⠀⠒⠢⢄⠀⠸⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠘⠔⠷⢀⢔⡭⢺⠁⠀⠀⠀⠀⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⡤⠒⠒⠂⢄⠀⣠⠖⠋⡠⠃⠀⠀⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢸⠂⠀⡀⠀⠀⣱⠋⡠⠊⠁⠀⠀⠠⣄⠀⠀⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠃⠼⠏⠀⢰⣹⠊⠀⠀⢠⠤⠤⣄⠈⣷⡀⠙⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⢇⢠⡄⠘⡦⠈⡇⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡀⠘⡇⠀⠀⠀⠀⠉⠀⢀⡇⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⠿⠀⡈⠢⢄⣀⣀⣀⡠⠞⢠⣧⠚⢉⠑⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢡⠀⣷⢦⣈⠔⣶⠀⠀⣰⠋⠀⠀⠿⠷⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢤⣽⢛⣼⡓⣻⡾⠂⢠⢧⠔⠁⠀⠈⠢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⢽⣡⡟⡉⠀⣠⣼⠂⡄⠀⡔⠲⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠙⠀⢣⣾⣇⣿⢸⢀⠀⠉⠀⠁⠀⠀⠀⠀⠄⠒⢲⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢦⣤⣴⣶⣦⣄⣿⣾⣿⢱⣿⡇⢀⢤⢄⠀⣀⡤⠤⣜⠀⠀⠈⡻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠻⣿⣿⣭⣛⣜⣽⠏⠈⢿⣷⣸⠈⠉⢰⣷⡆⠀⡇⠡⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣭⣿⢧⣟⡶⣿⡖⠚⢺⣿⡟⠒⡢⡈⠀⠀⢧⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢰⣿⣿⣿⣷⡟⢹⣾⣷⠀⠀⠉⠻⢢⣄⣹⠀⢀⡼⣪⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣀⠾⠛⠋⠉⠁⠀⠈⢿⠏⠀⡀⠤⠐⠈⣈⠟⠉⠁⣿⣿⡇⠀⠀⠀⢀⡠⠐⠒⠠⠄⡀⠀⢀⣀⣀⡼⢿⡢⣦⠀⣠⠐⠒⠠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⣀⠀⡴⠭⠤⠐⠒⢉⠀⣤⣦⣤⣻⣻⣳⣶⣶⠒⡌⠀⣤⢄⠀⠀⠮⢗⢄⣙⡣⢵⢾⣳⡶⠀⠚⠂⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⠝⠁⡤⠊⠑⠢⣜⡀⠀⢀⣴⠶⠁⠀⠘⠻⢿⡋⢹⣛⣟⡁⢀⣝⠤⠠⠋⠀⠀⠀⠈⡆⠀⠿⠊⠛⢳⣀⣠⡤⠤⠤⢄⣜⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀⠀⡅⠈⠉⠉⠀⠀⠀⡠⠄⠀⢍⠉⢿⡌⠁⠀⠀⣉⣀⠀⠀⠀⠀⠀⢀⠃⢀⣠⠴⠚⠉⠂⠀⠀⠒⠈⠁⠀⢀⢉⠒⠤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⠂⡴⣖⢄⠀⢣⠀⡜⠿⡂⠀⠀⢄⣶⠄⠀⡃⡎⢀⣤⣶⡿⠷⠛⠝⠓⠊⠁⢀⣮⡖⠭⠐⠂⠈⠉⠉⠉⠉⠐⠠⡀⠠⢿⣿⠆⠀⠈⠐⢄⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠢⠈⠁⠎⠀⠀⠓⢜⢄⠀⠀⠀⠀⠀⠀⣠⣟⠴⠭⢁⠀⠀⠠⠀⠤⠤⠴⠚⠋⠁⠀⠀⠀⠀⠀⠤⢄⡀⠀⠀⠀⢸⠀⠈⠈⠀⠀⠀⠀⠀⠈⠛⠿⢦⣄⣀⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⡄⠀⠉⠙⠓⠒⠒⠒⠋⠉⠀⢀⡀⠀⠑⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⢀⡠⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⡉⠋⠀⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        </div>
+        <div class="ascii-bg__group ascii-bg__group--right">
+        <pre class="ascii ascii--star ascii--star-measure">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣴⣤⡀⠀⠀⠀⠀⣭⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⡀⠈⠳⣄⠀⠀⠼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢠⠀⠀⠀⢳⠀⠀⠈⠢⡀⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠉⢻⠉⢀⠀⠀⢣⠀⠀⠀⠈⢼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠺⠃⠀⠀⠡⠀⠀⠀⣸⠐⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠱⡀⠀⣿⡀⢈⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⣹⣾⣿⣷⣏⣀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠉⠉⠉⠉⠙⠛⢻⣿⣶⣿⡟⠛⠋⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠞⠹⣿⢏⠳⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠢⠀⠀⠀⠰⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡀⢸⠀⠀⠡⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢬⠀⠀⠀⠱⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢄⠀⠀⢣⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠶⠀⠀⠓</pre>
+        <pre class="ascii ascii--flower ascii--flower-3">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡶⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡇⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢹⣳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠑⠯⣗⣒⡶⠶⠒⠒⠲⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⡞⡟⠃⠀⠘⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⣼⢁⡷⣄⠀⠀⢸⡇⠀⠀⠀⠀⢀⡤⠖⣒⠖⣒⡭⣿⣷⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⡇⠀⢟⠀⠈⠙⢦⡈⡇⠀⠀⢀⡴⠉⣠⠞⢥⡾⣫⣿⠿⠋⠉⢻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢸⣇⢷⠀⠘⡄⠀⠀⠀⠙⢿⡀⠀⣾⠂⡰⢁⡾⡷⢁⢿⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣟⡄⢣⡀⠹⡄⠀⠀⠀⠀⠙⣴⡇⢰⠃⣾⠳⠁⡸⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡄⠀⠱⡄⠘⡄⢰⣦⡀⠀⠘⡇⢸⢰⡏⠃⢠⠃⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣄⢰⣾⣦⠈⢆⢻⣡⢸⣆⢹⢸⢸⡇⠀⡌⠀⣰⠁⢀⣠⠤⠤⠠⢤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⡤⠖⠒⠒⠋⠉⠑⠚⠷⣍⠻⣷⣶⡧⣧⠉⣏⠈⡏⢺⣧⣠⡃⢠⣣⡶⡫⢖⣨⣤⣤⣤⣼⣷⡤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⡴⣋⠤⠀⠀⠀⠀⠂⠤⠜⣿⠷⢽⣮⣿⣽⣝⢧⡸⡄⢳⢸⣿⣸⢁⣿⣿⣿⠾⢋⠭⣲⣶⣶⣟⣽⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⣾⣾⣷⠾⠿⠶⠶⠶⠆⣴⣤⢰⣿⣤⣌⡛⠿⣿⣿⣷⣳⣾⣆⡿⡏⣼⣿⡿⢡⡞⣡⠞⠁⠀⠀⠀⠀⠈⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢀⣿⠋⠀⠀⠀⠀⠀⠀⠐⠂⠤⠭⢅⣛⡙⡛⢷⣺⣿⣾⣿⣽⣿⣹⣿⡋⠈⠙⢷⠚⠁⠀⠀⠀⠀⠀⢠⣴⠿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⡾⠋⠙⠲⢦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠠⠠⣿⣿⣿⣿⣿⣿⢗⡢⣍⠂⡈⢇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠙⠒⠲⢤⣤⣤⢤⣤⣴⡶⣾⣿⣿⠿⢻⠟⣿⡄⠀⠙⢮⢣⡘⡜⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡤⠖⠚⣩⠟⣩⣔⠟⣋⢝⡲⠝⠛⢩⣿⡀⠈⢆⠑⠙⣦⡀⠀⠳⣳⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡼⢋⢾⢟⡥⡪⠖⠁⣀⣀⣬⡴⣟⡙⠒⠂⠥⢤⣈⣑⡠⡈⢿⣾⡇⠀⠀⠀⠀⠀⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣧⡳⢡⣮⠎⢠⠖⠋⠉⠉⠁⠀⠀⠈⠓⢤⠀⠀⠙⣿⣯⡿⣯⣷⡇⠀⠀⠀⣀⠴⢽⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡟⡇⢷⢃⢆⡏⠀⠀⠀⢀⣤⣤⣤⣶⣶⡶⢦⣄⠀⠈⠹⣇⠘⡿⠀⢀⡴⠚⢁⠀⣸⢹⢱⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢻⣧⣽⢸⡏⠀⠀⠀⠀⠀⠀⠉⢻⠻⡛⢮⣓⢄⠙⠒⢤⡹⣼⡇⢠⠏⠀⠀⡎⢠⡟⡘⢸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⣏⢿⣄⣀⣀⣀⡄⠀⠀⢸⢸⡘⢆⠙⠧⡀⠀⠀⠈⢮⡃⡞⢀⡀⢸⢀⡞⠁⠃⡸⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠿⠿⠟⠋⠀⠀⠀⠘⣇⠃⠀⠱⡌⠹⡔⡄⠀⢰⣳⡇⣾⡇⢣⣿⠇⠆⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠀⠀⠀⠈⢦⠸⡜⣀⠈⢿⠸⣸⠀⣸⢃⢎⣤⠀⢠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣀⣀⣀⣀⣀⡘⢦⠀⠀⠀⢣⠘⡽⡇⢸⡀⣿⢢⢇⢌⡿⠋⢀⡯⠖⠚⠉⠉⠉⠒⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⡿⠛⣉⡠⠤⠀⣀⡉⠑⢷⣄⠈⢢⡁⢻⡽⡄⡇⡿⡜⣾⡞⠀⢠⡞⣡⠔⣒⣈⣭⣭⣍⣙⡻⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣷⠽⠒⠚⠛⢓⡒⠾⢭⣖⣼⣷⣤⣙⢇⢳⣣⡇⣧⢃⣾⡕⣴⣷⡭⠖⠛⠉⠁⠀⠀⢀⣈⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠿⠉⠁⠀⠀⠀⠀⠀⠉⣉⠒⠽⡻⣿⣿⣯⣯⣟⣿⣿⡿⣫⣾⣟⠯⠠⠀⠚⠐⠂⡠⠉⠀⠀⠀⠀⢙⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢶⣖⠂⠐⠒⣭⣶⠾⠟⢿⣿⣿⣿⣿⣿⣾⣿⣭⣤⡔⠲⠶⣒⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠘⣧⡀⢀⡜⠁⠀⡠⣪⡫⡻⠛⡿⡛⢿⠿⣙⠓⠾⢭⡒⢌⠱⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⣀⣤⣖⢾⢟⣛⣫⣍⠙⢯⡉⠓⢶⣄⡀⠀⠈⢹⣾⠇⠀⡜⡰⡱⡝⠀⣌⠇⠇⢸⡤⠀⠉⠲⣄⠻⣧⡑⡌⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠉⠉⠙⠛⢿⣔⡒⠚⠚⠛⠶⣿⣄⠈⢫⠻⣦⡀⠀⣿⠀⢸⠀⢷⡹⠀⡰⡝⢠⠂⠀⠀⠀⠀⠀⡄⠳⣌⢾⡜⡜⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢯⡉⠉⠉⠉⠙⠻⣿⣧⣹⣿⣦⠸⡆⢸⠀⣬⠃⣰⡝⡰⠋⠀⠀⠀⠀⠀⢠⣧⠀⠘⢧⣿⢱⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠳⣬⡤⠤⠀⠒⠛⠿⣿⣿⣧⠹⡼⢐⣟⢠⣯⣾⠁⠀⠀⠀⠀⠀⢠⢾⣹⠀⠀⠘⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠓⠻⠾⠶⣼⣯⣿⣿⣧⠐⣼⡗⡞⠀⣿⡀⠀⠀⠀⠀⢠⣏⣿⠰⡇⠀⣠⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⣠⠎⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠚⠿⣷⣮⡛⢿⡄⢸⣧⠀⠀⠀⢀⡏⣿⡏⡼⡇⠀⠉⠀⠀⠀⠀⠀⠀⠀⣀⣴⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⣾⣿⡌⣿⡄⠀⠀⢸⢡⣿⡱⢱⠇⠀⠀⠀⠀⠀⠀⣠⣴⡾⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣾⣿⣄⠀⢸⣞⣿⠃⡞⠀⠀⠀⠀⠀⣠⣾⣟⡥⠤⠤⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠤⠒⠒⠒⠢⠤⣄⡀⠹⣿⣿⡂⠈⣟⣿⣴⠇⠀⠀⠀⢀⣼⡿⠋⠁⠀⠀⠀⠀⠈⠳⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠏⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠮⣿⣷⡄⠘⣿⣿⡀⠀⠀⠀⣸⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣦⡈⢿⡇⠀⠀⠀⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣮⣻⣄⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢤⣀⣀⣀⣀⡤⠤⠤⠤⢠⣀⣀⣀⠀⠀⠈⠻⢿⣿⣦⡀⠸⡄⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠒⠦⢄⣙⢿⣷⣄⠛⣀⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⢿⣿⣾⣦⡀⠀⠀⠀⠀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣷⡄⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        </div>
+      </div>
+
+      <div class="page">
+        <div class="measure">
+          <div class="window__bar">
+            <span class="window__controls" aria-hidden="true"><i class="fa-solid fa-minus"></i> <i class="fa-regular fa-square"></i> <i class="fa-solid fa-x"></i></span>
+          </div>
+          <div class="measure__panel">
+
+            <div class="code" data-typewriter>
+              <h2 class="code__line code__title" id="measurements-title"><span class="type"><span class="type__text"><span class="code__fn">Measurements</span><span class="code__punct" aria-hidden="true">(){</span></span></span></h2>
+              <ul class="code__body">
+                <li class="code__line"><span class="type"><span class="type__text"><span class="code__key">Height:</span>   <span class="code__val">6'1"</span></span></span></li>
+                <li class="code__line"><span class="type"><span class="type__text"><span class="code__key">Chest:</span>    <span class="code__val">36"</span></span></span></li>
+                <li class="code__line"><span class="type"><span class="type__text"><span class="code__key">Waist:</span>    <span class="code__val">27"</span></span></span></li>
+                <li class="code__line"><span class="type"><span class="type__text"><span class="code__key">Hips:</span>     <span class="code__val">36"</span></span></span></li>
+                <li class="code__line"><span class="type"><span class="type__text"><span class="code__key">Inseam:</span>   <span class="code__val">34"</span></span></span></li>
+              </ul>
+              <p class="code__line code__close" aria-hidden="true"><span class="type"><span class="type__text">}</span></span></p>
+            </div>
+
+            <div class="photo-window">
+              <div class="photo-window__bar" aria-hidden="true">
+                <span class="photo-window__title">Amplify.jpg</span>
+                <span class="photo-window__controls"><i class="fa-solid fa-minus"></i> <i class="fa-regular fa-square"></i> <i class="fa-solid fa-x"></i></span>
+              </div>
+              <img class="photo-window__img" src="imgs/Amplify.jpeg" alt="Legrand in a blue off-the-shoulder blazer, hands resting under the chin" width="4672" height="7008" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 3: photo gallery -->
+    <section class="screen screen--photos" aria-labelledby="photos-title">
+      <div class="ascii-bg" aria-hidden="true">
+        <div class="ascii-bg__group ascii-bg__group--left">
+        <pre class="ascii ascii--star ascii--star5-left">⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠋⠀⠀⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠙⢿⣦⡀⠀⠀⢀⣀⣀⣠⣤⣀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀⠙⠿⠿⠟⠛⠛⠋⠉⠉⠛⣷⡄
+⠀⠀⠀⠀⠀⠀⠀⢠⣿⢀⣀⡤⣤⢤⡤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⣀⣤⣶⠿⠛⠋⠁⠁⠀⠀⠀⠉⠛⣯⣳⡀⠀⠀⠀⠀⠀⠀⢠⡿⠃
+⠀⣠⣶⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡻⣿⠀⠀⠀⠀⠀⣠⡿⠃⠀
+⢸⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⡴⠋⠉⢹⡆⠀⠀⢸⣿⠀⠀⠀⠀⢠⡿⠁⠀⠀
+⢸⣧⡀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠈⠀⠀⢀⣮⠏⠀⠀⠀⠀⠘⣷⡀⠀⠀
+⠀⠙⠿⣶⣤⣀⠀⠀⠀⠀⠈⠻⢦⣤⣤⣤⡶⠟⠁⠀⠀⠀⠀⠀⠀⠘⣷⡄⠀
+⠀⠀⠀⠀⠉⠛⠿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⣤⣤⣄⣀⣀⣤⡿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠀⠈⠉⠉⠙⠛⠉⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣄⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        <pre class="ascii ascii--sparkle ascii--stars-1">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠶⠊⠙⠛⣿⣦⡀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⡽⠃⣀⡀⠀⠀⠀⣿⡃⢀⣀⠇⠠⠄⠀⠀⣀⡀⠀⣠⠴⠖⠒⣒⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣀⣀⣀⣤⣤⣄⣤⣺⠗⠋⠀⡴⠋⣷⠀⠀⠀⣿⡂⠀⠀⢸⠀⢸⡇⢰⠏⡠⢳⠁⠀⠀⢀⣀⡀⠉⠳⣄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣿⡉⠉⠉⠉⠉⠉⠀⠀⣠⡾⠁⠀⠸⡇⠀⠀⣿⣇⠀⠀⠀⠀⢸⣇⠿⢠⠃⡇⠀⠀⣾⡕⠛⢮⢣⠀⠈⡆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠿⣿⢄⠀⠰⣾⠿⠿⠿⠟⠀⠀⠀⠀⣧⡀⠀⠛⢿⣆⠀⠙⢶⡸⠘⠀⢸⢠⡇⠀⠀⣿⡇⠀⡸⠋⠀⢀⡇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⡄⠀⠀⠈⢻⣷⢄⠘⢷⡄⠀⠀⠀⠀⠀⠀⠈⠙⢷⡄⠀⠙⢵⣄⠀⠙⠀⠀⠸⡈⢟⣄⠀⠙⢷⣄⣀⣀⣠⡾⠃⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠆⠀⠀⠀⠀⢻⣿⣦⠀⢹⡄⠀⠀⠀⠀⠀⠀⠀⠈⠛⣦⠀⠀⠙⣆⠀⠀⠀⠀⠙⣌⢪⠳⢄⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢀⣀⠇⣀⣀⠀⠀⠀⣟⡅⠀⢼⠀⠀⠀⠀⠀⠀⡔⣿⠛⠋⠉⠀⠀⠀⢹⡆⠀⠀⡆⠀⠈⢣⢦⡈⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠸⠀⠀⠀⠀⠀⣛⡇⠀⣿⠀⢀⣤⡶⠲⣄⢹⣿⠀⠀⠀⢀⣴⠾⠟⠁⠀⠀⡇⠀⠀⠀⢇⣿⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠰⠀⠀⠀⠀⠀⣿⣷⠀⣿⡶⠋⠉⢠⣄⠀⠙⢿⠀⠀⣿⠇⠀⠀⢀⡤⢤⣀⠇⢰⠒⠒⣌⣮⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⡇⠀⠀⠀⢀⡠⡿⢪⡣⡀⠀⠀⢰⣯⠀⠀⠞⠓⠉⠉⠉⠁⠈⠀⠀⢸⣻⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⢀⣠⢵⠏⠀⠀⠙⢝⣄⠀⠀⣿⠀⠀⠀⠀⢀⣤⣤⣤⡄⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣧⣶⡟⠓⠁⢰⡄⢀⡀⠈⠻⣗⣦⣟⠀⠀⠀⣰⣿⠁⠠⠤⠟⠀⠀⢰⢻⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠁⠀⠀⢀⣼⣿⣯⡀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⠀⠀⠀⠀⠀⢀⣾⣷⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠚⠉⣹⠃⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⠶⠦⠶⠶⠾⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⣰⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣃⣈⠧⣤⡒⠶⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠒⠪⢥⢇⣠⡔⠉⠱⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⢣⠞⠁⠈⠉⠙⠛⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        <pre class="ascii ascii--sparkle ascii--stars-3">⠀⠀⠀⠀⠀⠀⠀⣀⡄⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠐⢿⠓⠀⢀⡴⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠹⡒⠤⣀⡀⠀⢀⡴⠋⢠⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠱⡀⠀⠉⠑⠋⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢱⡄⠀⠀⠀⠀⠀⠉⠒⠤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣈⠵⠦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢀⡤⠋⣀⣀⣀⣤⠀⠀⠀⢰⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠈⠉⠁⠀⠀⠀⠀⢧⠀⠀⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢐⣶⣆⠀⠀⢠⠈⢇⢰⠃⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⣰⡄⠀⠀⠀⠀⠀⠀
+⠀⠈⠙⠀⠀⠀⣏⣧⠈⠟⠀⠀⠀⠀⠀⠀⠽⡿⠆⠀⠀⠀⢀⣿⣿⣦⣶⣶⠟⠀⠀
+⠀⠀⠀⠀⣀⣸⣿⣯⢧⠤⢤⣤⣴⠦⠀⠀⠀⠁⠀⠀⠛⠿⣿⣿⣿⣿⣿⡁⠀⠀⠀
+⠀⠙⠯⡻⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠰⣄⣠⡇⠀⠀⠀⠀⢸⣿⡿⠛⠛⠿⣆⠀⠀
+⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⠁⠀⠀⠀⣠⢿⣿⠟⠒⠀⠀⠀⠸⠊⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⡾⣿⠿⠺⢝⡯⢧⠀⠀⠀⠀⠀⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢼⠓⠁⠀⠀⠀⠉⠺⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜⠈⡇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢟⡒⠒⠛⠁⠀⠘⠒⠒⢲⡶⠂⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⡆⠀⠈⢢⠀⠀⠀⠀⡤⠚⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠉⠀⢠⠇⢀⡤⣀⠀⢳⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠊⠁⠀⠈⠳⣼⡄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡄⠀⣀⠀⠀⢀⣄⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠶⢾⣿⣟⠁⠀⠀⠺⡟⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⢉⠓⠀⠀⠀⠀⠀</pre>
+        </div>
+        <div class="ascii-bg__group ascii-bg__group--right">
+        <pre class="ascii ascii--star ascii--star5-right">⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠋⠀⠀⠙⢿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠙⢿⣦⡀⠀⠀⢀⣀⣀⣠⣤⣀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀⠀⠙⠿⠿⠟⠛⠛⠋⠉⠉⠛⣷⡄
+⠀⠀⠀⠀⠀⠀⠀⢠⣿⢀⣀⡤⣤⢤⡤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⣀⣤⣶⠿⠛⠋⠁⠁⠀⠀⠀⠉⠛⣯⣳⡀⠀⠀⠀⠀⠀⠀⢠⡿⠃
+⠀⣠⣶⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡻⣿⠀⠀⠀⠀⠀⣠⡿⠃⠀
+⢸⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⡴⠋⠉⢹⡆⠀⠀⢸⣿⠀⠀⠀⠀⢠⡿⠁⠀⠀
+⢸⣧⡀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠈⠀⠀⢀⣮⠏⠀⠀⠀⠀⠘⣷⡀⠀⠀
+⠀⠙⠿⣶⣤⣀⠀⠀⠀⠀⠈⠻⢦⣤⣤⣤⡶⠟⠁⠀⠀⠀⠀⠀⠀⠘⣷⡄⠀
+⠀⠀⠀⠀⠉⠛⠿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⣿⡆⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⣤⣤⣄⣀⣀⣤⡿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⢹⡇⠀⠀⠀⠀⠀⣠⣾⠏⠀⠀⠀⠈⠉⠉⠙⠛⠉⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣄⠀⠀⣠⣾⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        <pre class="ascii ascii--sparkle ascii--stars-2">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀⠙⢆⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡤⠴⠚⠀⠀⠀⠀⠀⠀⢀⠚⠁⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢤⡀⠀⠀⠀⠀⠀⠀⢠⠊⠀⠀⠠⢀⠱⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⡇⠀⠀⠀⠀⠀⠀⢇⠀⠀⠈⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⢀⡤⠚⠐⠒⠠⠼⡄⠀⢀⣾⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠉⠀⠀⠀⣀⣀⣀⣀⣠⢏⡌⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣮⠩⣭⣥⣾⣿⣘⠳⠦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣳⢹⣿⣿⣿⡿⣋⡴⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡏⢞⣋⣝⠻⡇⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠛⠋⠈⠈⠳⢦⡗⠀⠀⠀⢰⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⢀⣠⡏⠈⢷⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⣿⡹⠉⠉⠀⠀⠀⠀⠉⣹⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⠈⢡⠂⠀⠙⢦⠀⠀⠀⠀⢠⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠁⠁⠀⠀⢼⠀⣀⡤⣄⡀⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡀⠀⠾⠋⠁⠀⠀⠙⠛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⢀⣀⣀⣀⠞⣕⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⡀⠁⠐⡢⠀⠹⣌⢿⣾⣿⣶⡭⣹⠶⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠰⠀⠀⠀⡼⡼⢟⢿⡇⡎⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠸⠓⠚⠉⠓⢧⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡏⢧⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⢶⣛⠉⠀⠀⢉⡼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⡇⢀⣄⣈⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠟⠉⠀⠉⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        <pre class="ascii ascii--sparkle ascii--stars-4">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢄⣦⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⡟⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣿⡦⠄⠀⠀⠀⡀⢸⠀⠀⠀⠀⠀⠠⠔⣴⡦
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⠀⣀⣀⣸⣿⣿⣁⣀⣀⠀⠀⠈⠈⠁
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠹⢻⠿⠅⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⡀⣆⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢦⣀⠀⠀⣿⣿⡀⠀⣀⡴⠀⠀⠈⠝⡿⠀⠀⠀⢀⣀⣰⣼⣶⣂⣀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣶⣿⣿⣶⣿⡿⠁⠀⠀⠀⠀⠁⠀⠀⠀⠀⠈⠹⢻⠿⠍⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣠⣤⣤⣤⣴⣶⣿⣿⣿⣿⣿⣿⣶⣶⣤⣤⣤⣤⣄⣀⠀⠀⠀⠀⠀⢘⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⢙⣿⣿⣿⣿⣿⣿⡋⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢀⠀⠀⠀⢠⣿⠿⠛⣿⣿⠟⠿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠾⠳⠀⠀⠀⠈⠀⠀⠀⢻⡿⠀⠀⠀⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⡄⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣄⣾⣀⠀⠀⠀⠀⠒⠺⡿⡒⠂⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠐⠒⠒⣺⣿⣗⡚⠒⠂⠀⠀⠀⠃⠀⠀⠀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠿⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
+        </div>
+      </div>
+
+      <div class="page">
+        <div class="gallery-window">
+          <div class="gallery-window__bar">
+            <h2 class="gallery-window__title" id="photos-title">Photos<span aria-hidden="true">.zip</span></h2>
+            <span class="gallery-window__controls" aria-hidden="true"><i class="fa-solid fa-minus"></i> <i class="fa-regular fa-square"></i> <i class="fa-solid fa-x"></i></span>
+          </div>
+
+          <div class="gallery" tabindex="0" role="region" aria-label="Photo gallery, scrollable">
+            <ul class="gallery__grid">
+              <li class="gallery__item"><img data-src="imgs/Maximum(2).jpeg" alt="Legrand, Maximum, photo 3" width="1080" height="1620" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Maximum.jpeg" alt="Legrand, Maximum, photo 1" width="1320" height="1968" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Maximum(1).jpeg" alt="Legrand, Maximum, photo 2" width="1320" height="1949" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/FOTFIII.jpeg" alt="Legrand, FOTF III, photo 1" width="1186" height="1562" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/FOTFIII.JPG" alt="Legrand, FOTF III, photo 2" width="1365" height="2048" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/FOTFIII(1).jpeg" alt="Legrand, FOTF III, photo 3" width="1178" height="1563" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/FOTFIII(1).JPG" alt="Legrand, FOTF III, photo 4" width="3072" height="3840" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Amplify.jpeg" alt="Legrand, Amplify, photo 1" width="4672" height="7008" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Amplify.png" alt="Legrand, Amplify, photo 2" width="4284" height="5712" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Amplify(1).jpeg" alt="Legrand, Amplify, photo 3" width="4254" height="5318" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Amplify(2).jpeg" alt="Legrand, Amplify, photo 4" width="4672" height="5840" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/AmplifyRunway.jpg" alt="Legrand, Amplify runway, photo 1" width="1206" height="846" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2026.JPG" alt="Legrand, Blueprint 2026, photo 1" width="4000" height="6000" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2026(1).JPG" alt="Legrand, Blueprint 2026, photo 2" width="4000" height="6000" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2026(2).JPG" alt="Legrand, Blueprint 2026, photo 3" width="4000" height="6000" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2026(3).JPG" alt="Legrand, Blueprint 2026, photo 4" width="4000" height="6000" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2026(4).JPG" alt="Legrand, Blueprint 2026, photo 5" width="4000" height="6000" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2026(5).JPG" alt="Legrand, Blueprint 2026, photo 6" width="4000" height="6000" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/ASA.PNG" alt="Legrand, ASA, photo 2" width="1170" height="1676" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/ASA.JPG" alt="Legrand, ASA, photo 1" width="4000" height="5328" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/ASA(1).JPG" alt="Legrand, ASA, photo 3" width="4000" height="5328" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/ASA(2).JPG" alt="Legrand, ASA, photo 4" width="4000" height="5328" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/ASA(3).JPG" alt="Legrand, ASA, photo 5" width="4000" height="5328" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/ASA(4).JPG" alt="Legrand, ASA, photo 6" width="4000" height="5328" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/BFR.jpg" alt="Legrand, BFR, photo 1" width="584" height="876" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/FOTFII.JPG" alt="Legrand, FOTF II, photo 1" width="2880" height="3600" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/FOTFII.PNG" alt="Legrand, FOTF II, photo 2" width="864" height="1317" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/FOTFII(1).PNG" alt="Legrand, FOTF II, photo 3" width="923" height="1231" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint.jpeg" alt="Legrand, Blueprint, photo 1" width="1365" height="2048" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint.JPG" alt="Legrand, Blueprint, photo 2" width="4032" height="6048" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint(1).jpeg" alt="Legrand, Blueprint, photo 3" width="4000" height="6000" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint(1).JPG" alt="Legrand, Blueprint, photo 4" width="4032" height="6048" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint(2).jpeg" alt="Legrand, Blueprint, photo 5" width="4000" height="6000" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2024.jpeg" alt="Legrand, Blueprint 2024, photo 1" width="1365" height="2048" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2024(1).jpeg" alt="Legrand, Blueprint 2024, photo 2" width="2048" height="1365" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2024(2).jpeg" alt="Legrand, Blueprint 2024, photo 3" width="3456" height="5184" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2024(3).jpeg" alt="Legrand, Blueprint 2024, photo 4" width="1365" height="2048" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2024(4).jpeg" alt="Legrand, Blueprint 2024, photo 5" width="3456" height="5184" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2024(5).jpeg" alt="Legrand, Blueprint 2024, photo 6" width="3456" height="5184" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2024(6).jpeg" alt="Legrand, Blueprint 2024, photo 7" width="4821" height="3214" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025.JPG" alt="Legrand, Blueprint 2025, photo 2" width="1365" height="2048" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025.jpeg" alt="Legrand, Blueprint 2025, photo 1" width="2048" height="1365" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025(2).JPG" alt="Legrand, Blueprint 2025, photo 4" width="1362" height="2047" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025(1).JPG" alt="Legrand, Blueprint 2025, photo 3" width="2400" height="3600" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025(3).JPG" alt="Legrand, Blueprint 2025, photo 5" width="2400" height="3600" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025(4).JPG" alt="Legrand, Blueprint 2025, photo 6" width="2400" height="3600" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025(5).JPG" alt="Legrand, Blueprint 2025, photo 7" width="2400" height="3600" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025(6).JPG" alt="Legrand, Blueprint 2025, photo 8" width="2400" height="3600" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/Blueprint2025(7).JPG" alt="Legrand, Blueprint 2025, photo 9" width="2400" height="3600" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/BSU.JPG" alt="Legrand, BSU, photo 1" width="2832" height="3776" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/BSU.PNG" alt="Legrand, BSU, photo 2" width="1170" height="1731" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/BSU(1).JPG" alt="Legrand, BSU, photo 3" width="2405" height="3207" loading="lazy" fetchpriority="low" decoding="async"></li>
+              <li class="gallery__item"><img data-src="imgs/BSU(2).JPG" alt="Legrand, BSU, photo 4" width="2832" height="3776" loading="lazy" fetchpriority="low" decoding="async"></li>
+
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
